@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>Micrometer To Meter</title>
+</head>
+
+<body style="text-align: center; background: lightgreen; color: blue;">
+
+    <p>
+        <label>Micrometer</label>
+            <input id="inputmicro" type="number" placeholder="Micrometer" oninput="lengthorDistanceConverter(this.value)" onchange="lengthorDistanceConverter(this.value)">
+    </p>
+    <p>Meter: <span id="outputmeter"></span></p>
+
+    <script>
+        function lengthorDistanceConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputmeter").innerHTML = valNum / 1e+6;
+        }
+    </script>
+
+</body></html>
